@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>White Board</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<!-- navbar start -->
+
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<a href="#">Genrative AI</a>
+			<a href="#">Careers</a>
+			<a href="#">Blogs</a>
+			<a href="#">Docs</a>
+			<a href="#">Security</a>
+			<a href="#">Contact</a>
+		</div>
+	</div>
+
+
+	<!-- nav bar close  -->
+	<div class="blank_page">
+
+	</div>
+	<div class="tools-container">
+		<div class="tools-content">
+			<div class="tool active-tool" id="pen"> <img src="./icons/pen.svg" alt="" />
+				<div class="tool-options hide">
+					<div class="pen-size">
+						<input type="range" id="pensize" value="1" min="1" max="40" />
+					</div>
+					<div class="pen-colors">
+						<div class="black"></div>
+						<div class="yellow"></div>
+						<div class="blue"></div>
+						<div class="green"></div>
+						<div class="red"></div>
+					</div>
+				</div>
+			</div>
+			<div class="tool fade" id="eraser"> <img src="./icons/eraser.svg" alt="" />
+				<div class="tool-options hide">
+					<div class="eraser-size">
+						<input type="range" id="erasersize" value="1" min="1" max="40" />
+					</div>
+				</div>
+			</div>
+			<div class="tool" id="undo"> <img src="./icons/undo.svg" alt="" /> </div>
+			<div class="tool" id="redo"> <img src="./icons/redo.svg" alt="" /> </div>
+			<div class="tool" id="sticky"> <img src="./icons/sticky.svg" alt="" /> </div>
+			<div class="tool" id="photo"> <img src="./icons/pic.svg" alt="" />
+				<input type="file" class="hide" name="" id="photo-upload" />
+			</div>
+		</div>
+	</div>
+	<!-- dowloading page -->
+	<div class="rightMenu">
+		<div class="tool" id="download" style="width: 60px;"> <img src="./icons/download.svg" alt="" /> </div>
+
+		</div>
+	</div>
+
+	<script>
+
+
+	</script>
+	<!-- end downloading page  -->
+
+
+	<!-- AI Modal Button -->
+
+	<div class="Ai-modal">
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+	</div>
+
+	<!-- end of AI Modal button -->
+	<div class="drawing-container">
+		<canvas id="canvas"></canvas>
+	</div>
+
+	<script>
+
+		function openNav() {
+			document.getElementById("myNav").style.width = "100%";
+		}
+
+		function closeNav() {
+			document.getElementById("myNav").style.width = "0%";
+		}
+
+	</script>
+	<script src="script.js"></script>
+</body>
+
+</html>
